@@ -1,0 +1,81 @@
+\documentclass[12pt]{iopart}
+%\newcommand{\gguide}{{\it Preparing graphics for IOP Publishing journals}}
+%Uncomment next line if AMS fonts required
+%\usepackage{iopams}  
+
+\usepackage[square,numbers,sort&compress]{natbib}
+
+\usepackage{hyperref} %Hyperlinks!
+\usepackage[all]{hypcap} %Hyperlinks to top of figure
+
+\usepackage[nameinlink]{cleveref} %Use clever references
+
+\usepackage{siunitx} %Correctly render SI units
+
+\usepackage{graphicx} %Handle graphics
+\graphicspath{{figures/}} %Set default graphics search path
+\usepackage{tikz} %Render tikz figures
+\usetikzlibrary{external} %Render them externally
+\tikzexternalize[prefix=figures/tikz/] %render in this dir
+\usepackage{tikzscale} %add tikz to supported graphics
+\usetikzlibrary{plotmarks} %Add plot symbols and arrowheads
+
+\begin{document}
+
+\title[$\rm{P}_{n}$ bias due to $\beta$-detection threshold]{Recently identified systematic bias of $\beta$-delayed neutron emission probabilities determined by implantation within a long-counter}
+
+\input{authors.tex}
+
+\vspace{10pt}
+\begin{indented}
+\item[]\today
+\end{indented}
+
+\input{abstract.tex}
+
+
+% Uncomment for PACS numbers
+\pacs{29.30.Hs, 29.40.-n}%neutron spectroscopy, radiation detectors
+%
+% Uncomment for keywords
+\vspace{2pc}
+\noindent{\it Keywords}: $\beta$-delayed neutron emission; GEANT4; DSSD threshold
+
+% Uncomment for Submitted to journal title message
+\submitto{\jpg}
+%
+% Uncomment if a separate title page is required
+\maketitle
+% 
+% For two-column output uncomment the next line and choose [10pt] rather than [12pt] in the \documentclass declaration
+%\ioptwocol
+%
+
+\input{intro.tex}
+
+\section{$\rm{P}_{n}$ overestimation effect}
+ \begin{itemize}   
+  \item Pictorial and analytic description of effect. E.g. Cartoon of level scheme pointing from decay branches to beta-energy distributions. For example, \cref{fig:levelScheme}.
+  
+\begin{figure}[ht]
+	\includegraphics{levelScheme.tikz}
+	\caption{Level Scheme}
+	\label{fig:levelScheme} 	
+\end{figure}
+
+  \item Simulation description
+ \end{itemize}
+ 
+\input{results.tex}
+
+\input{implications.tex}
+  
+\input{acknowledgments.tex}
+
+
+%\section*{References}
+\bibliographystyle{iopart-num}
+\bibliography{PnBiasDoc}
+
+\end{document}
+

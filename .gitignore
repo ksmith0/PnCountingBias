@@ -1,5 +1,16 @@
+#Temporary Files
+*~
+*.swp
+
+#Ignore the tikz render folder
+figures/tikz/*
+
+#Ignore TeXMaker session files
+*.tks
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
+*.auxlock
 *.lof
 *.log
 *.lot
@@ -13,7 +24,7 @@
 # these rules might exclude image files for figures etc.
 # *.ps
 # *.eps
-# *.pdf
+*.pdf
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl
